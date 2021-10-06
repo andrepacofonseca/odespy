@@ -1,0 +1,42 @@
+# install Anaconda3
+# install  cplex 12.8
+#add to $path
+C:\Program Files\IBM\ILOG\CPLEX_Studio128\cplex\bin\x64_win64
+# install python API for cplex
+cd C:\Program Files\IBM\ILOG\CPLEX_Studio128\cplex\python
+python setup.py install
+#install cobrapy
+pip install cobra
+#install libsbml
+ conda install -c sbmlteam python-libsbml 
+#install odespy
+# if necessary configure the key 
+https://gist.github.com/adamjohnson/5682757
+
+# clone repository with git bash do the comand in Anaconda3/pkgs
+git clone git@github.com:thomasantony/odespy.git
+
+#install c compiler (windows)
+https://sourceforge.net/projects/mingw-w64/
+version:7.2.0; x86_64; posix; seh;
+
+# install package  (cmd)
+cd <path to anaconda packages>/odespy
+edit the file odespy/__init__.py and remove the content
+python setup.py config --compiler=mingw32 build --compiler=mingw32 install
+
+#install inspyred
+# add scripts (Anaconda) dir to $path to have access to pip
+c:\Users\sara\Anaconda3\Scripts
+pip install inspyred
+#install framed 
+pip install framed 
+
+#Prepare environment in PyCharm
+Open a new Project  DeCaF
+Remove all files of the project
+
+#import optimModels
+VCS >> Checkout...>> Git 
+https://github.com/BioSystemsUM/optimModels
+pull branch sara-py3
